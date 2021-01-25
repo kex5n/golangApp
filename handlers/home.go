@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
-	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/kex5n/golangApp/version"
@@ -20,7 +20,7 @@ func home(w http.ResponseWriter, _ *http.Request) {
 	body, err := json.Marshal(info)
 	if err != nil {
 		log.Printf("Could not encode info data: %v", err)
-		http.Error(w, http.StatusText(http.StatusServiceUnavalable), http.StatusServiceUnavalable)
+		http.Error(w, http.StatusText(http.StatusServiceUnavailable), http.StatusServiceUnavailable)
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
