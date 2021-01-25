@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 	"log"
-	"github.com/rumyantseva/advent-2017/handlers"
+	"github.com/kex5n/golangApp/handlers"
 )
 
 func main() {

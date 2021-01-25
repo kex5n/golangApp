@@ -5,7 +5,7 @@ import (
 )
 
 func Router() *mux.Router {
-	r := mux.NewRoouter()
+	r := mux.NewRouter()
 	r.HandleFunc("/home", home).Method("GET")
 	return r
 }
