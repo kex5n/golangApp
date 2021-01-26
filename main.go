@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"context"
 
 	"github.com/kex5n/golangApp/handlers"
 	"github.com/kex5n/golangApp/version"
@@ -28,7 +29,7 @@ func main() {
 
 	srv := &http.Server{
 		Addr: ":" + port,
-		Handler: r,
+		Handler: router,
 	}
 
 	go func() {
